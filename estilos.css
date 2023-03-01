@@ -1,0 +1,139 @@
+ *{
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contenedor{
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 2fr);
+    grid-template-rows: repeat(3, auto) ;
+}
+
+.contenedor .datos_personales{
+    background-color: #2e93a1;
+    font-weight:normal;
+    border-radius: 4px;
+    grid-column: 3/4;
+    grid-row: 1/3;
+    text-align: center;
+    color: #ede9e9;
+}
+.contenedor .datos_personales>h2{
+    text-align: center;
+    background-color:#004440;
+    border-radius: 2px;
+}
+.contenedor .datos_personales> p, img{
+    padding: 20px;  
+}
+.boton {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 95%;
+	height: 50px;
+	background: #004450;
+	color: #ede9e9;
+	font-size: 18px;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+	position: relative;
+	overflow: hidden;
+}
+
+.boton::after {
+	content: "Click para agregar datos";
+    display: inline-flex;
+    align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	background: #004460;
+	position: absolute;
+	z-index: 1;
+	top: -80px;
+	left: 0;
+	transition: .3s ease-in-out all;
+}
+.boton:hover::after {
+	top: 0;
+}
+.contenedor .exp_laboral,
+.contenedor .form_acad{
+    background:#ede9e9 ;
+	padding: 10px;
+	border-radius: 4px;
+}
+.exp_laboral {
+    grid-column:span 2 ;
+    grid-row: 1/2;
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-template-rows: repeat(6, auto);
+}
+.exp_laboral h3{
+    text-align: center;
+    grid-column: 1;
+    grid-row: 2/3;
+}
+.exp_laboral .des_trab{
+    grid-column: span 2;
+    grid-row:1/2 ;
+}
+.puesto1{
+    grid-column-start:1 ;
+    grid-row: 3;
+}
+.puesto2{
+    grid-column-start:1 ;
+    grid-row: 5;
+}
+.act_puesto1 {
+    list-style-position: inside;
+    grid-row-start: 4;
+    margin: 0 20px;
+}
+.act_puesto2{
+    list-style-position: inside;
+    grid-row-start: 6;
+    margin: 0 20px;
+    grid-column: span 2;
+}
+.duracion_puesto1{
+    grid-column-start: 3/4;
+    grid-row: 2/3;
+    text-align: right;
+}
+.duracion_puesto2{
+    grid-column-start: 3/4;
+    grid-row: 5/6;
+    text-align: right;
+}
+.form_acad{
+    grid-column: span 2;
+}
+.form_acad>h3{
+    text-align: center;
+    grid-column: span 2;
+}
+.form_acad{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+
+}
+.form_acad .title_form_acad{
+    grid-row-start: 2;
+}
+.form_acad .date_form_acad{
+    grid-column-start:2 ;
+    grid-row-start: 2;
+    text-align: right;
+}

@@ -47,7 +47,21 @@
 	position: relative;
 	overflow: hidden;
 }
-
+.caja_datos{
+    display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 95%;
+	height: 50px;
+	background: #144e4f;
+	color: #ede9e9;
+	font-size: 18px;
+	border: none;
+	border-radius: 5px;
+	position: relative;
+	overflow: hidden;
+    margin: 10px 0;
+}
 .boton::after {
 	content: "Click para agregar datos";
     display: inline-flex;
